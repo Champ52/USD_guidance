@@ -1,13 +1,94 @@
-body {
-    margin: 25px 25px 25px 25px;
-}
+/* body {
+    margin: 25px 25px 25px 25px;} */
 
 
 h2 {
-    color: grey;
-}
+    color: grey;}
 
 
 h3 {
     color: blue;
+    padding-top: 60px;}
+
+
+li + li {
+    margin-top: 10px;}
+
+
+div.content {   
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;}
+
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #d0d0d0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 5px;}
+
+
+.sidebar a {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+    transition: 0.3s;
+    display: block;}
+
+
+.sidebar a:hover {
+    text-decoration: underline;}
+
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;}
+
+
+.openbtn::before {
+    content: '☰ Table of Contents';}
+
+
+.openbtn:hover {
+    background-color: #444;}
+
+
+#main {
+    transition: margin-left .5s;
+    padding: 10px;}
+
+
+/*#################################################
+  #################################################*/
+
+
+@media only screen and (min-width: 1350px){
+    div.content {
+        margin-left: auto;
+        margin-right: auto;
+        width: 1000px;}
 }
+
+@media only screen and (max-width: 800px){
+    div.content {
+        margin-left: auto;
+        margin-right: auto;}
+
+    body {
+        font-size: 14px;}
+
+    .openbtn::before {
+        content: '☰';}
+}
+    /* Card view
+    organized list of sections */

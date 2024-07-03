@@ -15,659 +15,405 @@
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>US Application Guidance</title>
+
+    <script>
+        let toc_is_close = true;
+
+        function toggleTOC() {
+            if (toc_is_close) {
+            document.getElementById("mySidebar").style.width = "300px";
+            if (!x.matches) { // If media query matches
+                document.getElementById("main").style.marginLeft = "300px";
+            }
+            document.getElementById("OB1").style.display = "none";
+            toc_is_close = false;
+            } else {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+            document.getElementById("OB1").style.display = "flex";
+            toc_is_close = true;
+            }
+        }
+
+        function hide_sidebar(x) {
+            if (x.matches) { // If media query matches
+                toggleTOC();
+            }
+        }
+
+        // Create a MediaQueryList object
+        var x = window.matchMedia("(max-width: 1000px)")
+    </script>
 </head>
 
 
 <body>
-    <h2 style="text-align: center;">This site is under construction/maintenance. Please ignore typos and grammatical errors.</h2>
+    <button id="OB1" class="openbtn" onclick="toggleTOC()" style="position: fixed;"></button>
+    <div id="mySidebar" class="sidebar">
+        <div style="padding-bottom: 25px;">
+            <button id="OB2" class="openbtn" onclick="toggleTOC()" style="margin: 3px 8px;"></button>
+            <ol>
+                <li><a  onclick="hide_sidebar(x)" href="#sec_01">Completion of Academics</a></li>
+                <li><a  onclick="hide_sidebar(x)" href="#sec_02">Get the Test Scores</a></li>
+                <li><a  onclick="hide_sidebar(x)" href="#sec_03">Terminologies</a></li>
+                <li><a  onclick="hide_sidebar(x)" href="#sec_04">Sending Official Transcripts and Grade Evaluation (WES)</a></li>
+                <li><a  onclick="hide_sidebar(x)" href="#sec_05">Preparation of SOP & LOR</a></li>
+                <li><a  onclick="hide_sidebar(x)" href="#sec_06">Literature Review, Find your field of interest / courses / associated professors</a></li>
+                <li><a  onclick="hide_sidebar(x)" href="#sec_07">Compose emails (GA/RA/TA requests)</a></li>
+                <li><a  onclick="hide_sidebar(x)" href="#sec_08">Getting a dollar card (Dollar payments)</a></li>
+                <li><a  onclick="hide_sidebar(x)" href="#sec_09">Application to universities</a></li>
+                <li><a  onclick="hide_sidebar(x)" href="#sec_10">Complete Vaccination / Immunization requirement</a></li>
+                <li><a  onclick="hide_sidebar(x)" href="#sec_11">Scheduling visa interview</a></li>
+                <li><a  onclick="hide_sidebar(x)" href="#sec_12">Pre-arrival information form university</a></li>
+                <li><a  onclick="hide_sidebar(x)" href="#sec_13">Air ticketing</a></li>
+                <li><a  onclick="hide_sidebar(x)" href="#sec_14">After reaching to US</a></li>
+                <li><a  onclick="hide_sidebar(x)" href="#sec_15">Housing and Accomodation</a></li>
+                <li><a  onclick="hide_sidebar(x)" href="#sec_16">Google searching techniques</a></li>
+                <li><a  onclick="hide_sidebar(x)" href="#sec_17">How to contribute on this site</a></li>
+                <li><a  onclick="hide_sidebar(x)" href="#sec_18">Contact with following persons for getting details on respective Universities</a></li>
+                <li><a  onclick="hide_sidebar(x)" href="#sec_19">Things to bring along</a></li>
+                <li><a  onclick="hide_sidebar(x)" href="#sec_20">Suggestions for skill preparations</a></li>
+                <li><a  onclick="hide_sidebar(x)" href="#sec_21">Cellphones, Laptops and other accessories</a></li>
+                <li><a  onclick="hide_sidebar(x)" href="#sec_22">Preparation for Visa Interview</a></li>
+                <li><a  onclick="hide_sidebar(x)" href="#sec_23">Getting an NOC</a></li>
+                <li><a  onclick="hide_sidebar(x)" href="#sec_24">Interview Experience</a></li>
+            </ol>
+        </div>
+    </div>
 
-    <h3>Section-1 (Completion of Academics)</h3>
-    <p></p>
-    <ol>
-        <li>For admission to Bachelors (Undergrad level): Get Marksheet (SLC), Degree certificate (SLC), Transcript (HSEB), Degree certificate (HSEB)</li>
-        <li>For admission to Ms/Phd (Grad or PostGrad level): Get Transcript and Degree Certificate (Bachelor's and Master's if you have)</li>
-    </ol>
+    <div id="main">
+        <div class="content">
+            <h2 style="text-align: center; padding-top: 25px;">This site is under construction/maintenance. Please ignore typos and grammatical errors.</h2>
 
-    <h3>Section-2 (Get the Test Scores)</h3>
-    <p></p>
-    <ol>
-        <li>For admission to Bachelors/Undergrad level: I don't know.</li>
-        <li>For admission to Ms/Phd (Grad level): English Test (TOEFL, PTE, IELTS, Duolingo) and Graduation test (GRE, GMAT)</li>
-        <li>While making a payment with dollar card, go with the option of PayPal (you don't need a PayPal account for that), and select the option of guest user. It works for 100%. No extra charges by PayPal. Otherwise, payment via banks will cost you 18% (payment amount/0.85) more.</li>
-        <li>AlfaBeta is okay. However, they keep all attendants in the same room, and you might get disturbed during the speaking section. Most of the test takers prefer UCEF.</li>
-        <li>For a self payment of ets (GRE/TOEFL) using Dollar Card: <a href="https://www.quora.com/How-do-I-make-an-ETS-GRE-TOEFL-IELTS-payment-from-Nepal-Dollar-Card-Nabil-iCard">Quora Discussion</a></li>
-        <!-- Add more details on how to prepare for test, where to take test, procedures, significance, costs, time of prepartion, practice materials & sites, payment, waieve etc, how to send scores, test environment, preferred test centers  -->
-    </ol>
+            <h3 id="sec_01">Section-1 (Completion of Academics)</h3>
+            <p></p>
+            <ol>
+                <li>For admission to Bachelors (Undergrad level): Get Marksheet (SLC), Degree certificate (SLC), Transcript (HSEB), Degree certificate (HSEB)</li>
+                <li>For admission to Ms/Phd (Grad or PostGrad level): Get Transcript and Degree Certificate (Bachelor's and Master's if you have)</li>
+                <li>If you dont have a degree certificate (which you cannot get before the convocation) then you can ask for provisional certificate for temporary use.</li>
+            </ol>
 
-    <h3>Section-3 (Terminologies)</h3>
-    <p></p>
-    <ol>
-        <li>Official Transcript: Attested xerox copies of original transcript. Xeroxed copies shall be attested by officers from ECD (Exam Control Division). The verification process occurs by attesting the xeroxed documents and the service must have been available in your institution without any trouble. The attested documents thus collected are now your official documents (official transcript or official degree certificate).</li>
-        <li>Un-official Transcript: Transcript copies you scanned, xeroxed or captured yourself. Take a pictures from cellphone, that's it.</li>
-        <li>Degree Certificate: It's a graduation certificate provided in convocation ceremony. TU usually organizes convocation in December. You can apply for the provisional degree certificate if you need one earlier. However, transcript should be collected prior to applying for provisional degree certificate.</li>
-        <li>WES/Grade Evaluation: Evaluation of your transcript and degree certificate by WES organization. It's a third party service provider. It evaluates your academics and gives the report, which later is recognized by foreign universities. Some of the foreign universities require WES evaluation report as a part of application process.</li>
-        <li>In-state tuition fee: This is usually for US residents. Fee is lower for students of the state where university lies. We are not eligible for in-state tuition fee. Some universities, however, provide admission with in-state tuition fee as a part of scholarship.</li>
-        <li>Graduate Assistant (GA): Assistantship provided to graduate students. It can be either be research assistantship or teaching assistantship.</li>
-        <li>Teaching Assistant (TA): Assistantship provided for assisting professors regarding the documentation. Usually you will be asked to grade students homework (answersheet will be provided in most cases) and help students if they have any queries. In some cases (very rare), you will be asked to teach in the class or supervise in the lab. TA is easier compared to RA.</li>
-        <li>Research Assistant (RA): Assistantship provided for assisting in research programs. You will be assigned with some tasks or research objectives to perform research works. RA works consists of reading papers, collecting literatures, experimental works, writing reports etc. It is little bit tough compared to TA works, yet helps you building your better profile.</li>
-        <li>Stipend: It's a living allowance provided as a part of GA/TA/RA. Studenst will be paid biweekly for their contribution. Stipend package for GA/TA/RA generally starts from $18K per annum. In average, students gets stipend of $24K per annum. Also, it depends on the universities and school. Students in medecine school gets stipend of around $60K per annum.</li>
-        <li>Offer Letter: It's a letter sent to students for making an agreement of assistantship. Department/Professor will send the letter via email and student have to return it by putting signature on it. Offer letter provides information on tuition waiver, health insurance, stipend and number of hours the student is expected to work on including the other payment details.</li>
-        <li>I-20 Form: It is a form provided as a proof of acceptane to admission application. It gives details on SEVIS ID/number, visa type, class start and end date, annual estimated living cost and tuition fees. Getting a I-20 is considered halfway done towards US journey. You can apply for a visa appointment after getting a I-20.</li>
-        <li>SEVIS: It is a number provided in I-20 form. It is unique for everyone.</li>
-        <li>Immunization: Universities mandates students to show proofs on some vaccination. Students usually takes vaccination indicated by university and have to show the proof provided by medical officer. Teku hospital provides free service (however, you will need to buy required vaccines on your own). It usually costs around Rs.11,000 for vaccination as a part of immunization requirements.
-        </li>
-        <li>Fall, Spring, Summer: These are the term related to admission intake. Table below shows the basic information on these terms. TODO</li>
-        <li>Undergrad: Bachelors level</li>
-        <li>Grad/post grad: Master's level or Ph.D.</li>
-        <li>Doctoral/post doc: Ph.D. is doctoral degree and person who works in academics after completion of Ph.D. is considered doing a post doctoral.</li>
-        <li>Public/Private Universities: Publicly owned and privately owned. Generally private universites provide fewer scholarship and gives higher priorities to the paying students.</li>
-    </ol>
+            <h3 id="sec_02">Section-2 (Get the Test Scores)</h3>
+            <p></p>
+            <ol>
+                <li>For admission to Bachelors/Undergrad level: I don't know.</li>
+                <li>For admission to Ms/Phd (Grad level): English Test (TOEFL, PTE, IELTS, Duolingo) and Standardization test (GRE, GMAT)</li>
+                <li>If you happen to encounter any problem with dollar payment then go to <a href="#sec_08">Section-8</a> for help.</li>
+                <li>AlfaBeta is okay. However, they keep all attendants in the same room, and you might get disturbed during the speaking section. Most of the test takers prefer UCEF.</li>
+                <li>For a self payment of ets (GRE/TOEFL) using Dollar Card: <a href="https://www.quora.com/How-do-I-make-an-ETS-GRE-TOEFL-IELTS-payment-from-Nepal-Dollar-Card-Nabil-iCard">Quora Discussion</a></li>
+                <!-- Add more details on how to prepare for test, where to take test, procedures, significance, costs, time of prepartion, practice materials & sites, payment, waieve etc, how to send scores, test environment, preferred test centers  -->
+            </ol>
 
-    <h3>Section-4 (Sending Official Transcripts and Grade Evaluation (WES))</h3>
-    <p></p>
-    <ol>
-        <li>See terminologies section for Official / Unofficial Transcript and Degree Certificate (Official transcript is not your original transcript).</li>
-        <li>Some universites require official transcript and some requires third party evaluation such as WES evaluation as a part of application.</li>
-        <li>You don't need to send official transcript or WES evaluation unless its a mandatory requirement of the university.</li>
-        <li>Documents sent to universites or WES won't be returned to you, so don't send original copies.</li>
-        <li>Official transcript can be sent in two way: One via email sent from officer in ECD (Exam Control Division) on your behalf using official email id (eg: exam@tribhuvan-university.edu.np), and the email should contain the scanned copies of attested documents attached to it (ask with officer in Room-18 to do so). Second by sending courier of sealed envelope containing attested documents. Students from TU prefer the second option.</li>
-        <li>Multiple recipients is allowed with additional payments of $32 from WES.</li>
-        <li>I have heard higher than 70% (TU, IOE) would be equivalent to around 3.2 GPA. However, that depends on the grading you obtain in the various subjects. Simply, higher the standard deviation of your marks, lower could be your GPA compared to the one scoring the similar percentage but with lower standard deviation.</li>
-        <li>Process of getting official transcript and degree certificate in a sealed envelope.
-            <ul>
-                <li>Make a xerox copies (b/w photocopy) of your transcript and degree certificate.</li>
-                <li>Go visit ECD (Exam Control Division) of your institution/university, brining xeroxed and original copies. TU has it's ECD in Balkhu.</li>
-                <li>Collect a DVF (document-verification-form) from ECD office (Room-3) asking for document verification, fill it up, and then go for bank deposit.</li>
-                <li>Get a bank voucher (Global IME / Nepal Bank) from any, deposit Rs.50 per page (get your DVF with you while making deposit in bank). Suppose your transcript has 6 pages, and degree certificate has 1 page, then you need to deposit total of 7*50 = Rs.350. [If you are preparing sealed envelope for WES, then you will have to include WES form inside the envelope. For doing so, you will need to pay additional Rs.200. That is, you will have to pay 7*50 + 200 = Rs.550 in total. *Fees can be updated, be sure of it before making a deposit.]</li>
-                <li>Now you have xeroxed copies of transcript and degree certificate including the original copies, stamped deposit voucher and DVF form (stamped by bank end). Now, go to Room-3 and follow the instructions until you get your sealed envelope. You will get the sealed envelope from Room-18 at the end. (Don't forget to mention/ask for including WES form inside the envelope at the end if you are sending it for WES)</li>
-                <li>If you have multiple degrees (Bachelor and Master), you can make a single or two separate envelopes as per your need for both the degrees.</li>
-                <li>All these works inside the TU can be finished within about 3 hrs, depending upon the queue.</li>
-            </ul>
-        </li>
-        <li>Things to know if you are sending official documents (sealed envelope) to WES:
-            <ul>
-                <li>Not all unis require WES evaluation (some accepts the unofficial transcripts)</li>
-                <li>You will need to create a WES account and get the WES registration number (WES number) prior to getting a sealed envelope.</li>
-                <li>WES number can be obtained even without a payment to WES, go to IME transfer option for that (you may later pay for it differently as per your convinience, that is using the card details)</li>
-                <li>Fill up WES form (which reads <a href="https://www.dochub.com/fillable-form/7475-wes-academic-records-request-form-canada-pdf">Academic Records Request Form</a>) from your side, and ask officer in ECD to fill the rest (sample in the link is provided for your reference only, you may get that form from WES official site). This WES form shall be included inside the sealed envelope. TU will charge you additional Rs.200 for doing so.</li>
-                <li>If you have multiple degrees (Bachelor & Master) to be evaluated together then, you will need to send them in a single envelope. Also, the payment to WES is regardless of number of degrees. Same payment, single account, even for the evaluation of dual or multiple degrees.</li>
-                <li>People usually prefer course by course evaluation, which will cost $249 for subscribing the package and additional $32 for adding recipients (standard delivery). In total, you will need to pay $271 for sending evaluation report to a single institution/university. Rates as of Dec-2023.</li>
-                <li>Payment to WES: You have three options. <b>Option-1:</b> Pay using your dollar card. <b>Option-2:</b> Get help from peoples living in aboard in exchange of Nepalese currency. <b>Option-3:</b> It is costly, but you can also pay it from central banks (such as Nabil Bank, tindhara, Nakshal branch, or any other central banks). They will charge your additional 18% and Rs.500 as service charge. For paying $271 to WES, you will end up paying $271/0.85 + Rs.500 = $318.82 + Rs.500 = Rs.[(318.8*134) + 500] = Rs.43,222 (exchange rate assumed to be $1 = Rs.134). No need of opening bank account, however, bank will ask you for showing a pan card or government provided id cards.</li>
-                <li>Even the courier service provider makes successful delivery, WES will take 4-5 days to change the status to "Received and reviewing". Don't worry, keep checking the status and you will get that changed in any hours. FedEX or DHL will take around 4 days to deliver your package to the WES office, however, WES will take another 4-5 days for the confirmation of delivery, so don't panic there.</li>
-                <li>You don't need a physical copy of evaluation report for yourself. You cand send the electronic copy as many times as you need, to wherever you want, from WES site (however it will cost $32 for sending as a standard delivery, similar to English test score).</li>
-                <li>It took 16 days for the evaluation of mine after my package reached the WES office. Feel free to ask me if you have any other queries regarding the WES.</li>
-            </ul>
-        </li>
-        <li>Now, you got the sealed envelope right? You may courier it to the desired university or WES. However, put details of your institution/university as a sender, not your name. Sealed envelope must be sent by the name of your institution/university (Courier service provider may also help you on this).</li>
-        <li>For making courier to WES, put address as provided in WES form above, which includes your WES number too.</li>
-        <li>There is a one agent (I forgot the name of shop, maybe "Namaste") in front of the TU, ECD gate. You may also ask them regaring the courier to WES, they are expert on it. They provide service for DHL and FedEX.</li>
-        <li>It usually costs around Rs.5000 for making courier of sealed envelope depending on the destination country and courier service provider.</li>
-    </ol>
+            <h3  id="sec_03">Section-3 (Terminologies)</h3>
+            <p></p>
+            <ol>
+                <li><b>Official Transcript:</b> Attested xerox copies of original transcript. Xeroxed copies shall be attested by officers from ECD (Exam Control Division). The verification process occurs by attesting the xeroxed documents and the service must have been available in your institution without any trouble. The attested documents thus collected are now your official documents (official transcript or official degree certificate).</li>
+                <li><b>Un-official Transcript:</b> Transcript copies you scanned, xeroxed or captured yourself. Take a pictures from cellphone, that's it.</li>
+                <li><b>Degree Certificate:</b> It's a graduation certificate provided in convocation ceremony. TU usually organizes convocation in December. You can apply for the provisional degree certificate if you need one earlier. However, transcript should be collected prior to applying for provisional degree certificate.</li>
+                <li><b>WES/Grade Evaluation:</b> Evaluation of your transcript and degree certificate by WES organization. It's a third party service provider. It evaluates your academics and gives the report, which later is recognized by foreign universities. Some of the foreign universities require WES evaluation report as a part of application process.</li>
+                <li><b>In-state tuition fee:</b> This is usually for US residents. Fee is lower for students of the state where university lies. We are not eligible for in-state tuition fee. Some universities, however, provide admission with in-state tuition fee as a part of scholarship.</li>
+                <li><b>Graduate Assistant (GA):</b> Assistantship provided to graduate students. It can be either be research assistantship or teaching assistantship.</li>
+                <li><b>Teaching Assistant (TA):</b> Assistantship provided for assisting professors regarding the documentation. Usually you will be asked to grade students homework (answersheet will be provided in most cases) and help students if they have any queries. In some cases (very rare), you will be asked to teach in the class or supervise in the lab. TA is easier compared to RA.</li>
+                <li><b>Research Assistant (RA):</b> Assistantship provided for assisting in research programs. You will be assigned with some tasks or research objectives to perform research works. RA works consists of reading papers, collecting literatures, experimental works, writing reports etc. It is little bit tough compared to TA works, yet helps you building your better profile.</li>
+                <li><b>Stipend:</b> It's a living allowance provided as a part of GA/TA/RA. Studenst will be paid biweekly for their contribution. Stipend package for GA/TA/RA generally starts from $18K per annum. In average, students gets stipend of $24K per annum. Also, it depends on the universities and school. Students in medecine school gets stipend of around $60K per annum.</li>
+                <li><b>Offer Letter:</b> It's a letter sent to students for making an agreement of assistantship. Department/Professor will send the letter via email and student have to return it by putting signature on it. Offer letter provides information on tuition waiver, health insurance, stipend and number of hours the student is expected to work on including the other payment details.</li>
+                <li><b>I-20 Form:</b> It is a form provided as a proof of acceptane to admission application. It gives details on SEVIS ID/number, visa type, class start and end date, annual estimated living cost and tuition fees. Getting a I-20 is considered halfway done towards US journey. You can apply for a visa appointment after getting a I-20.</li>
+                <li><b>SEVIS:</b> It is a number provided in I-20 form. It is unique for everyone.</li>
+                <li><b>Immunization:</b> Universities mandates students to show proofs on some vaccination. Students usually takes vaccination indicated by university and have to show the proof provided by medical officer. Teku hospital provides free service (however, you will need to buy required vaccines on your own). It usually costs around Rs.11,000 for vaccination as a part of immunization requirements.
+                </li>
+                <li><b>Fall, Spring, Summer:</b> These are the term related to admission intake. Table below shows the basic information on these terms. TODO</li>
+                <li><b>Undergrad:</b> Bachelors level</li>
+                <li><b>Grad/post grad:</b> Master's level or Ph.D.</li>
+                <li><b>Doctoral/post doc:</b> Ph.D. is doctoral degree and person who works in academics after completion of Ph.D. is considered doing a post doctoral.</li>
+                <li><b>Public/Private Universities:</b> Publicly owned and privately owned. Generally private universites provide fewer scholarship and gives higher priorities to the paying students.</li>
+            </ol>
 
-    <h3>Section-5 (Preparation of SOP)</h3>
-    <p></p>
-    <ol>
-        <li>Write structures (TODO)</li>
-        <li>Surf internet for how to structure any of those and what to highlight. If you are seeking an assistantship, you should be able to research on writing as well.</li>
-        <li>One thing you need to know is, no one would like to share such things. Mostly, you won't get direct help on SOP, nor for LOR.  The reason is someone might use the exact words, and if such documents/letters coincidently reach to the same university/professor, that would be a work of unethical practice to the earlier or currently processing students. However, you might get many examples prevalent on the internet. Use following syntax while making a google search and you will get results showing only the pdf files. <i><b>SOP samples filetype:pdf</b></i></li>
-    </ol>
+            <h3 id="sec_04">Section-4 (Sending Official Transcripts and Grade Evaluation (WES))</h3>
+            <p></p>
+            <ol>
+                <li>See <a href="#sec_03">Section-3</a> for terminologies associated with Official / Unofficial Transcript and Degree Certificate (FYI: Official transcript is not your original transcript).</li>
+                <li>Some universites require official transcript and some requires third party evaluation such as WES evaluation as a part of application.</li>
+                <li>You don't need to send official transcript or WES evaluation unless its a mandatory requirement of the university.</li>
+                <li>Documents sent to universites or WES won't be returned to you, so don't send original copies.</li>
+                <li>Official transcript can be sent in two way: One via email sent from officer in ECD (Exam Control Division) on your behalf using official email id (eg: exam@tribhuvan-university.edu.np), and the email should contain the scanned copies of attested documents attached to it (ask with officer in Room-18 to do so). Second by sending courier of sealed envelope containing attested documents. Students from TU prefer the second option.</li>
+                <li>Multiple recipients is allowed with additional payments of $32 from WES.</li>
+                <li>I have heard higher than 70% (TU, IOE) would be equivalent to around 3.2 GPA. However, that depends on the grading you obtain in the various subjects. Simply, higher the standard deviation of your marks, lower could be your GPA compared to the one scoring the similar percentage but with lower standard deviation.</li>
+                <li>Process of getting official transcript and degree certificate in a sealed envelope.
+                    <ul>
+                        <li>Make a xerox copies (b/w photocopy) of your transcript and degree certificate.</li>
+                        <li>Go visit ECD (Exam Control Division) of your institution/university, brining xeroxed and original copies. TU has it's ECD in Balkhu.</li>
+                        <li>Collect a DVF (document-verification-form) from ECD office (Room-3) asking for document verification, fill it up, and then go for bank deposit.</li>
+                        <li>Get a bank voucher (Global IME / Nepal Bank) from any, deposit Rs.50 per page (get your DVF with you while making deposit in bank). Suppose your transcript has 6 pages, and degree certificate has 1 page, then you need to deposit total of 7*50 = Rs.350. [If you are preparing sealed envelope for WES, then you will have to include WES form inside the envelope. For doing so, you will need to pay additional Rs.200. That is, you will have to pay 7*50 + 200 = Rs.550 in total. *Fees can be updated, be sure of it before making a deposit.]</li>
+                        <li>Now you have xeroxed copies of transcript and degree certificate including the original copies, stamped deposit voucher and DVF form (stamped by bank end). Now, go to Room-3 and follow the instructions until you get your sealed envelope. You will get the sealed envelope from Room-18 at the end. (Don't forget to mention/ask for including WES form inside the envelope at the end if you are sending it for WES)</li>
+                        <li>If you have multiple degrees (Bachelor and Master), you can make a single or two separate envelopes as per your need for both the degrees.</li>
+                        <li>All these works inside the TU can be finished within about 3 hrs, depending upon the queue.</li>
+                    </ul>
+                </li>
+                <li>Things to know if you are sending official documents (sealed envelope) to WES:
+                    <ul>
+                        <li>Not all unis require WES evaluation (some accepts the unofficial transcripts)</li>
+                        <li>You will need to create a WES account and get the WES registration number (WES number) prior to getting a sealed envelope.</li>
+                        <li>WES number can be obtained even without a payment to WES, go to IME transfer option for that (you may later pay for it differently as per your convinience, that is using the card details)</li>
+                        <li>Fill up WES form (which reads <a href="https://www.dochub.com/fillable-form/7475-wes-academic-records-request-form-canada-pdf">Academic Records Request Form</a>) from your side, and ask officer in ECD to fill the rest (sample in the link is provided for your reference only, you may get that form from WES official site). This WES form shall be included inside the sealed envelope. TU will charge you additional Rs.200 for doing so.</li>
+                        <li>If you have multiple degrees (Bachelor & Master) to be evaluated together then, you will need to send them in a single envelope. Also, the payment to WES is regardless of number of degrees. Same payment, single account, even for the evaluation of dual or multiple degrees.</li>
+                        <li>People usually prefer course by course evaluation, which will cost $249 for subscribing the package and additional $32 for adding recipients (standard delivery). In total, you will need to pay $271 for sending evaluation report to a single institution/university. Rates as of Dec-2023.</li>
+                        <li>Payment to WES: You have three options. <b>Option-1:</b> Pay using your dollar card. <b>Option-2:</b> Get help from peoples living in aboard in exchange of Nepalese currency. <b>Option-3:</b> It is costly, but you can also pay it from central banks (such as Nabil Bank, tindhara, Nakshal branch, or any other central banks). They will charge your additional 18% and Rs.500 as service charge. For paying $271 to WES, you will end up paying $271/0.85 + Rs.500 = $318.82 + Rs.500 = Rs.[(318.8*134) + 500] = Rs.43,222 (exchange rate assumed to be $1 = Rs.134). No need of opening bank account, however, bank will ask you for showing a pan card or government provided id cards.</li>
+                        <li>Even the courier service provider makes successful delivery, WES will take 4-5 days to change the status to "Received and reviewing". Don't worry, keep checking the status and you will get that changed in any hours. FedEX or DHL will take around 4 days to deliver your package to the WES office, however, WES will take another 4-5 days for the confirmation of delivery, so don't panic there.</li>
+                        <li>You don't need a physical copy of evaluation report for yourself. You cand send the electronic copy as many times as you need, to wherever you want, from WES site (however it will cost $32 for sending as a standard delivery, similar to English test score).</li>
+                        <li>It took 16 days for the evaluation of mine after my package reached the WES office. Feel free to ask me if you have any other queries regarding the WES.</li>
+                    </ul>
+                </li>
+                <li>Now, you got the sealed envelope right? You may courier it to the desired university or WES. However, put details of your institution/university as a sender, not your name. Sealed envelope must be sent by the name of your institution/university (Courier service provider may also help you on this).</li>
+                <li>For making courier to WES, put address as provided in WES form above, which includes your WES number too.</li>
+                <li>There is a one agent (I forgot the name of shop, maybe "Namaste") in front of the TU, ECD gate. You may also ask them regaring the courier to WES, they are expert on it. They provide service for DHL and FedEX.</li>
+                <li>It usually costs around Rs.5000 for making courier of sealed envelope depending on the destination country and courier service provider.</li>
+            </ol>
 
-    <h3>Section-6 (Preparation of LOR)</h3>
-    <p></p>
-    <ol>
-        <li>Impact of referral</li>
-        <li>Write here (TODO)</li>
-    </ol>
+            <h3 id="sec_05">Section-5 (Preparation of SOP & LOR)</h3>
+            <p></p>
+            <ol>
+                <li>Surf internet for how to structure any of those and what to highlight. If you are seeking an assistantship, you should be able to research on writing as well.</li>
+                <li>One thing you need to know is, no one would like to share such things. Mostly, you won't get direct help on SOP, nor for LOR.  The reason is someone might use the exact words, and if such documents/letters coincidently reach to the same university/professor, that would be a work of unethical practice to the earlier or currently processing students. However, you might get many examples prevalent on the internet. Use following syntax while making a google search and you will get results showing only the pdf files. <i><b>SOP samples filetype:pdf</b></i></li>
+                <li>Write structures (TODO)</li>
+            </ol>
 
-    <h3>Section-7 (Literature Review, Find your field of interest/courses/associated professors)</h3>
-    <p></p>
-    <ol>
-        <li>Letter of interest, labs, research centers, past works and publications</li>
-        <li>After hearing experience from others and one I myself gathered, here are my suggestions:</li>
-        <li>Mail those profs who have open positions or post ad regarding the positions (don't just email random professors). You can also find the info on open positions visiting the lab/research centers of your interested universities or vacancy ads in social medias.</li>
-        <li>When you are mailing professors with open positions, try to show that you have went through their research (just skim through a few papers and write 2-3 lines about that, especially on what took your interest)</li>
-        <li>Make your CV/resume best, I have seen many students getting offer just by lying in their CVs, yeah that sound crazy af. I should have done the similar to get into better one.</li>
-        <li>Mostly target profs in the following order: Assistant Professor, Associate Professor and only to the Full Professor. Higher chances with AP.</li>
-        <li>Connect this person in linked-in (he makes flood of posts on available positions):<a href="https://www.linkedin.com/in/md-abdullah-083515146">Md Abdullah</a></li>
-        <li>Also visit pages such as findphd.com</li>
-        <li>Randomly connect foreign professors from your field in linked-in (send as many as possible connection requests). This will increase your chances to find the vacancy post in your feeds.</li>
-        <li>What matters the most on 1-5:
-            <ul>
-                <li>GRE score: many schools are waiving (3)</li>
-                <li>TOEFL score: (4)</li>
-                <li>CV/Resume: (5), wish I could give it a 6 (so, make your CV strong, make it even if you don't know a thing, google it and learn the basic terms and intro tough, easy with ChatGPT)</li>
-                <li>Mail writing: (3)</li>
-                <li>Research experience: (5)</li>
-                <li>Academics: (3.5)</li>
-            </ul>
-        </li>
-    </ol>
+            <h3 id="sec_06">Section-6 (Literature Review, Find your field of interest / courses / associated professors)</h3>
+            <p></p>
+            <ol>
+                <li>Letter of interest, labs, research centers, past works and publications</li>
+                <li>After hearing experience from others and one I myself gathered, here are my suggestions:</li>
+                <li>Mail those profs who have open positions or post ad regarding the positions (don't just email random professors). You can also find the info on open positions visiting the lab/research centers of your interested universities or vacancy ads in social medias.</li>
+                <li>When you are mailing professors with open positions, try to show that you have went through their research (just skim through a few papers and write 2-3 lines about that, especially on what took your interest)</li>
+                <li>Make your CV/resume best, I have seen many students getting offer just by lying in their CVs, yeah that sound crazy af. I should have done the similar to get into better one.</li>
+                <li>Mostly target profs in the following order: Assistant Professor, Associate Professor and only to the Full Professor. Higher chances with AP.</li>
+                <li>Connect this person in linked-in (he makes flood of posts on available positions):<a href="https://www.linkedin.com/in/md-abdullah-083515146">Md Abdullah</a></li>
+                <li>Also visit pages such as findphd.com</li>
+                <li>Randomly connect foreign professors from your field in linked-in (send as many as possible connection requests). This will increase your chances to find the vacancy post in your feeds.</li>
+                <li>What matters the most on 1-5:
+                    <ul>
+                        <li>GRE score: many schools are waiving (3)</li>
+                        <li>TOEFL score: (4)</li>
+                        <li>CV/Resume: (5), wish I could give it a 6 (so, make your CV strong, make it even if you don't know a thing, google it and learn the basic terms and intro tough, easy with ChatGPT)</li>
+                        <li>Mail writing: (3)</li>
+                        <li>Research experience: (5)</li>
+                        <li>Academics: (3.5)</li>
+                    </ul>
+                </li>
+            </ol>
 
-    <h3>Section-8 (Compose emails (GA/RA/TA requests))</h3>
-    <p></p>
-    <ol>
-        <li>Professors won't have that much of time to discuss with each other on what mails they received. They will be getting tens or hundreds of mails every day. However, avoid discussion with multiple professors of same department if you get response back in your mail indicating possibility of assistantship opportunities.</li>
-        <li>Assistant or Associate Professor will more likely be seeking opportunities to strengthen their profile for getting promotion to full professor by contributing to various research projects. So, try approaching them.</li>
-        <li>No two professors will have a time to discuss on mails they received in their teatime, nor they want to. However, you might want to avoid emailing multiple professors of same lab or research center, this can cause trust conflicts. Just be careful mentioning/prioritizing professors while applying for the university.</li>
-    </ol>
+            <h3 id="sec_07">Section-7 (Compose emails (GA/RA/TA requests))</h3>
+            <p></p>
+            <ol>
+                <li>Professors won't have that much of time to discuss with each other on what mails they received. They will be getting tens or hundreds of mails every day. However, avoid discussion with multiple professors of same department if you get response back in your mail indicating possibility of assistantship opportunities.</li>
+                <li>Assistant or Associate Professor will more likely be seeking opportunities to strengthen their profile for getting promotion to full professor by contributing to various research projects. So, try approaching them.</li>
+                <li>No two professors will have a time to discuss on mails they received in their teatime, nor they want to. However, you might want to avoid emailing multiple professors of same lab or research center, this can cause trust conflicts. Just be careful mentioning/prioritizing professors while applying for the university.</li>
+            </ol>
 
-    <h3>Section-9 (Getting a dollar card (Dollar payments))</h3>
-    <p></p>
-    <ol>
-        <li>To get a dollar card: You will need to have a bank account, PAN card and ATM (debit card). Dollar card cannot be applied without getting a ATM card first.</li>
-        <li>If you have all three (Bank account, PAN card, and ATM card) you are eligible for applying dollar card (aka virtual iCard).</li>
-        <li>Dollar card can be applied from mobile app of respective bank, and it will be issued instantly after verification of PAN card.</li>
-        <li>Now, load the money on your dollar card (virtual iCard) and it's ready for payment. For, Nabil users, go to export card details for obtaining card details.</li>
-        <li>For a self payment of ets (GRE/TOEFL) using Dollar Card: <a href="https://www.quora.com/How-do-I-make-an-ETS-GRE-TOEFL-IELTS-payment-from-Nepal-Dollar-Card-Nabil-iCard">Quora Discussion</a></li>
-        <li>Central banks also allows you making a dollar payment (below $1000 and additional Rs.500 as a service charge).</li>
-        <li>You may also get help from agencies in consultancies, or persons living aboard in exchange of Nepalese currency.</li>
-    </ol>
+            <h3 id="sec_08">Section-8 (Getting a dollar card (Dollar payments))</h3>
+            <p></p>
+            <ol>
+                <li>To get a dollar card: You will need to have a bank account, PAN card and ATM (debit card). Dollar card cannot be applied without getting a ATM card first.</li>
+                <li>If you have all three (Bank account, PAN card, and ATM card) you are eligible for applying dollar card (aka virtual iCard).</li>
+                <li>Dollar card can be applied from mobile app of respective bank, and it will be issued instantly after verification of PAN card.</li>
+                <li>Now, load the money on your dollar card (virtual iCard) and it's ready for payment. For, Nabil users, go to export card details for obtaining card details.</li>
+                <li>For a self payment of ets (GRE/TOEFL) using Dollar Card: <a href="https://www.quora.com/How-do-I-make-an-ETS-GRE-TOEFL-IELTS-payment-from-Nepal-Dollar-Card-Nabil-iCard">Quora Discussion</a></li>
+                <li>Central banks (such as Nabil at Nakshal, NIC Asia at Thapathali) also allows you making a dollar payment (below $1000 at a time, additional Rs.500 as a service charge and government tax for each transaction).</li>
+                <li>Payment via banks will cost you 18% more (payment amount/0.85) as a government taxation. Government tax is waived in university application, and is applicable in payments of GRE, TOEFL, WES payments. </li>
+                <li>You may also get help from agencies in consultancies, or persons living aboard in exchange of Nepalese currency.</li>
+            </ol>
 
-    <h3>Section-10 (Application to universities)</h3>
-    <p></p>
-    <ol>
-        <li>Check on requirement of assitantships</li>
-        <li>For fall term, application deadline for most of the universities will be from December-end to January-end of earlier year. Getting your test scores (GRE/TOEFL) by the end of the November will help you much. You will have then some time for approaching to professor, discussion/meeting with them if someone response you back, application to university(ies), sending scores (if required) and all in December or January.</li>
-        <li>Common app will make you easier for sending the documents such as test scores, resume, academic documents and all. Send/upload all the required documents and it will forward them to the associated universities on itself. Mostly helpful in sending test scores with single instance. However, it will cut some service charge while paying the application fee. For instance, one uni had a free application fee, but common app charged $50 for sending the application. And in another uni, additional $30.</li>
-    </ol>
+            <h3 id="sec_09">Section-9 (Application to universities)</h3>
+            <p></p>
+            <ol>
+                <li>Check on requirement of assitantships</li>
+                <li>For fall term, application deadline for most of the universities will be from December-end to January-end of earlier year. Getting your test scores (GRE/TOEFL) by the end of the November will help you much. You will have then some time for approaching to professor, discussion/meeting with them if someone response you back, application to university(ies), sending scores (if required) and all in December or January.</li>
+                <li>Common app will make you easier for sending the documents such as test scores, resume, academic documents and all. Send/upload all the required documents and it will forward them to the associated universities on itself. Mostly helpful in sending test scores with single instance. However, it will cut some service charge while paying the application fee. For instance, one uni had a free application fee, but common app charged $50 for sending the application. And in another uni, additional $30.</li>
+            </ol>
 
-    <h3>Section-11 (Complete Vaccination / Immunization requirement)</h3>
-    <p></p>
-    <ol>
-        <li>Almost all universities in US/UK mandates those vaccination requirements (MRR, Meningitis, Hepatitis-B, TDAP,...). Students need to have proof of those vaccination. This is the topic we don't usually find in discussion, it's a surprise thing after completion of admission.</li>
-        <li>Those are the vaccines we usually took in our childhood, however, we did not keep the vaccination proof at that time. Now, we have to take those vaccines again for the sake of documentation. Some, clinics also provide documentation only service in lower cost, I had heard.</li>
-        <li>It's good to get vaccinated with first doses at least a month earlier of your departure/travell to US.</li>
-        <li>Some universites require vaccination proof before arrival, and some considers doing it after arrival as well. In later case, students take benefit of student health insurance from their university, saving money in Nepal.</li>
-        <li>You may visit Teku hospital in Vaccination Ward, it will cost you around Rs.11,000 in total.</li>
-    </ol>
+            <h3 id="sec_10">Section-10 (Complete Vaccination / Immunization requirement)</h3>
+            <p></p>
+            <ol>
+                <li>Almost all universities in US/UK mandates those vaccination requirements (MRR, Meningitis, Hepatitis-B, TDAP,...). Students need to have proof of those vaccination. This is the topic we don't usually find in discussion, it's a surprise thing after completion of admission.</li>
+                <li>Those are the vaccines we usually took in our childhood, however, we did not keep the vaccination proof at that time. Now, we have to take those vaccines again for the sake of documentation. Some, clinics also provide documentation only service in lower cost, I had heard.</li>
+                <li>It's good to get vaccinated with first doses at least a month earlier of your departure/travell to US.</li>
+                <li>Some universites require vaccination proof before arrival, and some considers doing it after arrival as well. In later case, students take benefit of student health insurance from their university, saving money in Nepal.</li>
+                <li>You may visit Teku hospital in Vaccination Ward, it will cost you around Rs.11,000 in total.</li>
+            </ol>
 
-    <h3>Section-12 (Scheduling visa interview)</h3>
-    <p></p>
-    <ol>
-        <li>For scheduling visa appointment, you will need an I-20 (SEVIS number), then fill up DS-160 form, and apply through CGI portal.</li>
-        <li>DS-160: Form required to fill up all your details, janam kundali they say (free of cost)</li>
-        <li>CGI: Visa interview scheduling portal (Cost: $185, can be paid with connect-ips in NPR)</li>
-        <li>SEVIS: For record keeping your information in US (Cost: $350, can be paid from central banks in NPR, or get help from dollar cards). You may pay it just a week before the visa interview date and shouldn't be late more than that.</li>
-        <li>Total cost after getting I-20: $185+$350 = $535</li>
-        <li><a href="https://web.telegram.org/a/#-1001567966058">Telegram group - USVN F1 Slot Update</a></li>
-        <li><a href="https://web.telegram.org/a/#-1001923634336">Telegram group - Spring/Fall USA F1 Slot Update</a></li>
-        <li>Fill up DS-160 form, validity and waiting time</li>
-        <li>CGI portal, payment, consulate office locations, timing, emergency request, attempts, banning conditions</li>
-        <li>SEVIS payment</li>
-        <li>Facebook groups (To be added)</li>
-        <li>Passport expiry date</li>
-        <li>SEVIS expiry date</li>
-        <li>No need to worry about dress code.</li>
-        <li>Not only the login attempts, making multiple clicks such as finding slots on multiple dates, making to-and-fro between pages, reloading/refreshing pages, are marked as suspicious activities. It usually shows a warning in yellow (at the top of Calander/reschedule page) before banning can be proceeded, so make sure you notice the alert message given in yellow from now onwards while navigating the pages in CGI portal.</li>
-        <li>4 attempts are available for re-scheduling.</li>
-    </ol>
+            <h3 id="sec_11">Section-11 (Scheduling visa interview)</h3>
+            <p></p>
+            <ol>
+                <li>For scheduling visa appointment, you will need an I-20 (SEVIS number), then fill up DS-160 form, and apply through CGI portal.</li>
+                <li>DS-160: Form required to fill up all your details, janam kundali they say (free of cost)</li>
+                <li>CGI: Visa interview scheduling portal (Cost: $185, can be paid with connect-ips in NPR)</li>
+                <li>SEVIS: For record keeping your information in US (Cost: $350, can be paid from central banks in NPR, or get help from dollar cards). You may pay it just a week before the visa interview date and shouldn't be late more than that.</li>
+                <li>Total cost after getting I-20: $185+$350 = $535</li>
+                <li><a href="https://web.telegram.org/a/#-1001567966058">Telegram group - USVN F1 Slot Update</a></li>
+                <li><a href="https://web.telegram.org/a/#-1001923634336">Telegram group - Spring/Fall USA F1 Slot Update</a></li>
+                <li>Fill up DS-160 form, validity and waiting time</li>
+                <li>CGI portal, payment, consulate office locations, timing, emergency request, attempts, banning conditions</li>
+                <li>SEVIS payment</li>
+                <li>Facebook groups (To be added)</li>
+                <li>Passport expiry date</li>
+                <li>SEVIS expiry date</li>
+                <li>No need to worry about dress code.</li>
+                <li>Not only the login attempts, making multiple clicks such as finding slots on multiple dates, making to-and-fro between pages, reloading/refreshing pages, are marked as suspicious activities. It usually shows a warning in yellow (at the top of Calander/reschedule page) before banning can be proceeded, so make sure you notice the alert message given in yellow from now onwards while navigating the pages in CGI portal.</li>
+                <li>4 attempts are available for re-scheduling.</li>
+            </ol>
 
-    <h3>Section-13 (Pre-arrival information form university)</h3>
-    <p></p>
-    <ol>
-        <li>It is an information circulated/provided by your university.</li>
-        <li>Class registration.</li>
-    </ol>
+            <h3 id="sec_12">Section-12 (Pre-arrival information form university)</h3>
+            <p></p>
+            <ol>
+                <li>It is an information circulated/provided by your university. Generally, universities will walk you through all the requirements you need to complete. Monitor your emails constantly.</li>
+                <li>Register for classes/courses. You may also discuss this with the academic advisor (find it from your deaprtment).</li>
+                <li>Attain the orientation programs (some are mandotary and must attain physically). Usually they organize such events a few days ahead of class starting date.</li>
+                <li>If by any chance, you will not be able to make it in time, you may discuss it with the representative from your department and ISS (international student service) of your university.</li>
+                <li>In some cases, mostly for students with assistantships, will be asked to take online training courses in many areas. You will be emailed with such information if needed.</li>
+                <li>If you have any doubts or questions, do not hesitate to reach out to your department or ISS (international Student Service) at your university.</li>
+                <li>Connection/Reach out to Nepal students comunity</li>
+            </ol>
 
 
-    <h3>Section-15 (Air ticketing)</h3>
-    <p></p>
-    <ol>
-        <li>You may use google travel for searching flights and cheapest option.</li>
-        <li>We have a nepali website too: <a href="https://www.sastotickets.com">Sasto Tickets</a></li>
-        <li>Make a student account in your selected airways (Qatar Airways, Turkish Airways, etc...), select flight and hold it. Then you may pay for it later via travel agent or someone living in aboard.</li>
-        <li>Student accounts get 10% discount on first ticket.</li>
-    </ol>
+            <h3 id="sec_13">Section-13 (Air ticketing)</h3>
+            <p></p>
+            <ol>
+                <li>You may use google travel for searching flights and cheapest option.</li>
+                <li>We have a nepali website for filtering international flights: <a href="https://www.sastotickets.com">Sasto Tickets</a></li>
+                <li>Make a student account in your selected airways (Qatar Airways, Turkish Airways, etc...), and you will get some discounts. Student accounts get 10% discount on first ticket.</li>
+                <li>You may select the flight and hold it for a couple of days without any payment. Then you can pay it later getting help for dollar service providers (such as travel agent or someone living in aboard).</li>
+            </ol>
 
-    <h3>Section-16 (After reaching to US)</h3>
-    <p></p>
-    <ol>
-        <li>Get a sim card.</li>
-        <li>Visit grocery, and pack needy accessories and vegitables at least for a week.</li>
-        <li>Attain mandatory orientation sessions organized by university.</li>
-        <li>Open bank account (You may email me for referral of Chase Bank).</li>
-        <li>Apply for SSN (Social Security Number) if you are awarded with assistantship.</li>
-    </ol>
+            <h3 id="sec_14">Section-14 (After reaching to US)</h3>
+            <p></p>
+            <ol>
+                <li>Get a sim card. Only your email id and US address is enough to get one.</li>
+                <li>Visit grocery, and pack needy accessories and vegitables at least for a week. It's good to have a list prepared before you go for shopping.</li>
+                <li>Attain mandatory orientation sessions organized by university.</li>
+                <li>Open bank account (you may email me for referral of Chase Bank and you will get some bonus using my referral).</li>
+                <li>Apply for SSN (Social Security Number) if you are awarded with assistantship.</li>
+            </ol>
 
-    <h3>Section-17 (Housing and Accomodation)</h3>
-    <p></p>
-    <ol>
-        <li>Write here (TODO)</li>
-        <li>Write here (TODO)</li>
-    </ol>
+            <h3 id="sec_15">Section-15 (Housing and Accomodation)</h3>
+            <p></p>
+            <ol>
+                <li>Its always better to get in contact with the current students from your intended university. Consult with them about the housing requirements.</li>
+                <li>You can find Facebook groups named after your univeristy. Try searching online using different keywords such as: Housing at ABC university, Room at ABC university, ABC accomodation.</li>
+                <li>First thing try finding the Facebook group of Nepalese Student Association at your university.</li>
+                <li>Do not make any payments unless you get proper verification of all the details. Scamming is common in US.</li>
+            </ol>
 
-    <h3>Section-18 (Connection/Reach out to Nepali community students)</h3>
-    <p></p>
-    <ol>
-        <li>Write here (TODO)</li>
-        <li>Write here (TODO)</li>
-    </ol>
+            <h3 id="sec_16">Section-16 (Google searching techniques)</h3>
+            <p></p>
+            <ol>
+                <li>Syntax below (notice the colon symbol ':') will help you directly get the link to the desired site location. For the name_of_university you may also write university site, example: fsu.edu for florida state university.</li>
+                <li>Follow these searching techniques:</li>
+                    <ul>
+                        <li>name_of_university: Phd in your_department</li>
+                        <li>name_of_university: english language proficiency requirement for graduate admission</li>
+                        <li>name_of_university: gre requirements for graduate admission</li>
+                        <li>name_of_university: available phd positions in your_department</li>
+                        <li>name_of_university: your_department: research laboratories/centers</li>
+                        <li>name_of_university: your_department: available phd positions</li>
+                        <li>name_of_university: your_department: faculty people</li>
+                        <li>Examples (Florida State University)</li>
+                        <li>fsu.edu: mechanical department: available phd positions</li>
+                        <li>florida state university: available phd positions in mechanical department</li>
+                        <li>fsu.edu: mechanical department: professors directory</li>
+                    </ul>
+                <li>For finding something in the pdf format, try using this syntax ==> topic filetype:pdf</li>
+                    <ul>
+                        <li>SOP filetype:pdf</li>
+                        <li>Statement of Purpose filetype:pdf</li>
+                        <li>SOP for mechanical students filetype:pdf</li>
+                        <li>LOR filetype:pdf</li>
+                    </ul>
+                <li>For finding something in the image format, try using this syntax ==> topic filetype:image</li>
+                    <ul>
+                        <li>I-20 format filetype:pdf</li>
+                        <li>US visa filetype:pdf</li>
+                        <li>You may also go to 'Image' option in your search menu</li>
+                    </ul>
+            </ol>
 
-    <h3>Section-19 (Google searching techniques)</h3>
-    <p></p>
-    <ol>
-        <li>Syntax below (notice the colon symbol ':') will help you directly get the link to the desired site location. For the name_of_university you may also write university site, example: fsu.edu for florida state university.</li>
-        <li>Follow these searching techniques:</li>
-            <ul>
-                <li>name_of_university: Phd in your_department</li>
-                <li>name_of_university: english language proficiency requirement for graduate admission</li>
-                <li>name_of_university: gre requirements for graduate admission</li>
-                <li>name_of_university: available phd positions in your_department</li>
-                <li>name_of_university: your_department: research laboratories/centers</li>
-                <li>name_of_university: your_department: available phd positions</li>
-                <li>name_of_university: your_department: faculty people</li>
-                <li>Examples (Florida State University)</li>
-                <li>fsu.edu: mechanical department: available phd positions</li>
-                <li>florida state university: available phd positions in mechanical department</li>
-                <li>fsu.edu: mechanical department: professors directory</li>
-            </ul>
-    </ol>
+            <h3 id="sec_17">Section-17 (How to contribute on this site)</h3>
+            <p></p>
+            <ol>
+                <li>If you've found this site helpful, consider expressing your gratitude by using my referral for opening a bank account or applying for a credit card after arriving in US. Both of us will benefit: I'll receive points for referring you, and you'll also earn points for using the referral. I can provide referrals for Chase Bank and Discover credit cards.  Please send me an email at <a href="mailto:republicchamp58@gmail.com">republicchamp58@gmail.com</a> for further details.</li>
+                <li>You may also provide me with the details you would like to add in any of the topics at <a href="mailto:republicchamp58@gmail.com">republicchamp58@gmail.com</a>. Or, we can also collaborate through github.</li>
+            </ol>
 
-    <h3>Section-20 (How to contribute on this site)</h3>
-    <p></p>
-    <ol>
-        <li>If you've found this site helpful, consider expressing your gratitude by using my referral for opening a bank account or applying for a credit card after arriving in US. Both of us will benefit: I'll receive points for referring you, and you'll also earn points for using the referral. I can provide referrals for Chase Bank and Discover credit cards.  Please send me an email at <a href="mailto:republicchamp58@gmail.com">republicchamp58@gmail.com</a> for further details.</li>
-        <li>You may also provide me with the details you would like to add in any of the topics at <a href="mailto:republicchamp58@gmail.com">republicchamp58@gmail.com</a>. Or, we can also collaborate through github.</li>
-    </ol>
+            <h3 id="sec_18">Section-18 (Contact with following persons for getting details on respective Universities)</h3>
+            <p></p>
+            <ol>
+                <li>Auburn University - <a href="https://www.linkedin.com/in/rukesh-gusain-60889619a">Rukesh Gusain</a></li>
+                <li>Florida Atlantic University - <a href="https://www.linkedin.com/in/sushil-champ">Sushil Chapai</a></li>
+                <li>Miami University - <a href="https://www.linkedin.com/in/subodh-bhujel">Subodh Bhujel</a> </li>
+                <li>Michigan State University - <a href="https://www.linkedin.com/in/santosh-chhetri-79595b116">Santosh Chhetri</a></li>
+                <li>Northeastern University - <a href="https://www.linkedin.com/in/aamod-khatiwada">Aamod Khatiwoda</a></li>
+                <li>Purdue University - <a href="https://www.linkedin.com/in/bijay-chhetri-06b19120">Bijay Chhetri</a></li>
+                <li>Southern Illinois University (Carbondale) - <a href="https://www.linkedin.com/in/aayushma-singh-aa7667148">Aayushma Singh</a></li>
+                <li>University of Cincinnati - <a href="https://www.linkedin.com/in/kaurab-gautam-380a30146">Kaurab Gautam</a></li>
+                <li>University of South Florida - <a href="https://www.linkedin.com/in/aadya-bhattarai-706769194">Aadya Bhattarai</a></li>
+                <li>Want to be a helping hand? Email me with your name, university name and email id (or linked-in id), and I will add your name here [<a href="mailto:republicchamp58@gmail.com">republicchamp58@gmail.com</a>].</li>
+            </ol>
 
-    <h3>Section-21 (Contact following persons for getting details on respective Universities)</h3>
-    <p></p>
-    <ol>
-        <li>Auburn University - <a href="https://www.linkedin.com/in/rukesh-gusain-60889619a">Rukesh Gusain</a></li>
-        <li>Florida Atlantic University - <a href="https://www.linkedin.com/in/sushil-champ">Sushil Chapai</a></li>
-        <li>Miami University - <a href="https://www.linkedin.com/in/subodh-bhujel">Subodh Bhujel</a> </li>
-        <li>Michigan State University - <a href="https://www.linkedin.com/in/santosh-chhetri-79595b116">Santosh Chhetri</a></li>
-        <li>Northeastern University - <a href="https://www.linkedin.com/in/aamod-khatiwada">Aamod Khatiwoda</a></li>
-        <li>Purdue University - <a href="https://www.linkedin.com/in/bijay-chhetri-06b19120">Bijay Chhetri</a></li>
-        <li>Southern Illinois University (Carbondale) - <a href="https://www.linkedin.com/in/aayushma-singh-aa7667148">Aayushma Singh</a></li>
-        <li>University of Cincinnati - <a href="https://www.linkedin.com/in/kaurab-gautam-380a30146">Kaurab Gautam</a></li>
-        <li>University of South Florida - <a href="https://www.linkedin.com/in/aadya-bhattarai-706769194">Aadya Bhattarai</a></li>
-        <li>Want to be a helping hand? Email me with your name, university name and email id (or linked-in id), and I will add your name here [<a href="mailto:republicchamp58@gmail.com">republicchamp58@gmail.com</a>].</li>
-    </ol>
+            <h3 id="sec_19">Section-19 (Things to bring along)</h3>
+            <p></p>
+            <ol>
+                <li>Visit this google sheet for general <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRnqu0A-_MqHxyoh5P7QyvXi-P0B9ixlSg6yJanIMY4myYjlJ84x1aUcERnLzsPHP4aaR1h34TLsiyK/pubhtml">Shopping List</a></li>
+                <li>Select clothings items as per your preferences considering the weather conditions.</li>
+                <li>It's better to consult with the students who is/was already at your university (you may find them in linked-in or Facebook)</li>
+                <li>Make following items easy accessible at airport: Passport, signed I-20, Air-ticket, NOC certificate (other documents are less likely be asked to present)</li>
+                <li>Visit <a href="https://www.tsa.gov/travel/security-screening/whatcanibring/all">TSA website</a> for more details on items permitted and restricted to bring along</li>
+            </ol>
 
-    <h3>Section-22 (Things to bring along)</h3>
-    <p></p>
-    <ol>
-        <li>State wise requirements</li>
-        <li>Requrements per weather conditions</li>
-        <li>What not to bring</li>
-        <li>Luggaging tips, how to pack, locate, arrange</li>
-        <li>Docs and xerox copies</li>
-        <li>Visit TSA website for more details</li>
-    </ol>
+            <h3 id="sec_20">Section-20 (Suggestions for skill preparations)</h3>
+            <p></p>
+            <ol>
+                <li>Barista training (costs around 15k for 15 days training)</li>
+                <li>Driving license (costs around 8k for 15 days training)</li>
+                <li>Make-up and hair-cutting (you will make good part time money with saloon skills, all you need is a hair trimming machine with you)</li>
+                <li>Microsoft office package (Word, Excel, PPT)</li>
+                <li>Basic programming (Python, Matlab, Latex)</li>
+                <li>Machine Learning</li>
+            </ol>
 
-    <h3>Section-23 (Suggestions for skill preparations)</h3>
-    <p></p>
-    <ol>
-        <li>Barista training (cost, time and locations)</li>
-        <li>Driving license (cost, time and locations)</li>
-        <li>Make-up and hair-cutting</li>
-        <li>Microsoft office package (Word, Excel, PPT)</li>
-        <li>Basic programming (Python, Matlab, Latex)</li>
-        <li>Machine Learning</li>
-    </ol>
+            <h3 id="sec_21">Section-21 (Cellphones, Laptops and other accessories)</h3>
+            <p></p>
+            <ol>
+                <li>It's good to bring laptop if you already have one, however make sure you have no cracked applications installed in your system.</li>
+                <li>US SIMs will not work on cellphones brought from Nepal for more than 2 months. You will need to get a newer one after that. So, it's not an good idea to bring expensive/fancy cellphone from Nepal.</li>
+                <li>Most students prefer paperless works and owns tablets for academic purpose. Bring one if you already have it, otherwise you can get one later after your arrival.</li>
+            </ol>
 
-    <h3>Section-24 (Expense controlling tips)</h3>
-    <p></p>
-    <ol>
-        <li>How to minimize expense</li>
-        <li>How to get the used stuffs</li>
-    </ol>
+            <h3 id="sec_22">Section-22 (Preparation for Visa Interview)</h3>
+            <p></p>
+            <ol>
+                <li>It's just a casual discussion. You will be interviewed from a window, not a table-chair system.</li>
+                <li>So, a dress code doesn't seem very appealing here. The person who takes interview won't be seeing your footwear and dress below your shoulder.</li>
+                <li>Most people go with casual dress (I myself went wearing a normal pant, jacket, sport shoe and a woolen cap for an interview in Dec). Wearing a formal dress is good, but not a thing to be worried about.</li>
+                <li>Confidence matters, be relaxed and try to answer genuinly. Most attendants seem to delevering memorized answers and were instantly rejected.</li>
+                <li>VO will not ask many questions to participants if they are awarded with assitantship.</li>
+            </ol>
 
-    <h3>Section-25 (Cellphones, Laptops and other accessories)</h3>
-    <p></p>
-    <ol>
-        <li>Write here (TODO)</li>
-        <li>Write here (TODO)</li>
-    </ol>
+            <h3 id="sec_23">Section-23 (Getting an NOC)</h3>
+            <p></p>
+            <ol>
+                <li>Apply online, pay online, need to visit physically only to verify the documents (you will be called for doing so).</li>
+                <li>Costs Rs.2000, and pay only after completion of online verification (you will be emailed to make payment).</li>
+            </ol>
 
-    <h3>Section-26 (What to bring and not to in returing to Nepal)</h3>
-    <p></p>
-    <ol>
-        <li>Write here (TODO)</li>
-        <li>Write here (TODO)</li>
-    </ol>
-
-    <h3>Section-27 (Requirements before enrollment)</h3>
-    <p></p>
-    <ol>
-        <li>Research ethics training</li>
-        <li>Training on basics rules and policies</li>
-        <li>Knowledge of federal laws</li>
-    </ol>
-
-    <h3>Section-28 (Preparation for Visa Interview)</h3>
-    <p></p>
-    <ol>
-        <li>It's just a casual discussion. You will be interviewed from a window, not a table-chair system.</li>
-        <li>So, a dress code doesn't seem very appealing here. The person who takes interview won't be seeing your footwear and dress below your shoulder.</li>
-        <li>Most people go with casual dress (I myself went wearing a normal pant, jacket, sport shoe and a woolen cap for an interview in Dec). Wearing a formal dress is good, but not a thing to be worried about.</li>
-        <li>Confidence matters, be relaxed and try to answer genuinly. Most attendants seem to delevering memorized answers and were instantly rejected.</li>
-        <li>VO will not ask many questions to participants if they are awarded with assitantship.</li>
-    </ol>
-
-    <h3>Section-29 (Getting a NOC)</h3>
-    <p></p>
-    <ol>
-        <li>Apply online, pay online, need to visit physically only to verify the documents (you will be called for doing so).</li>
-        <li>Costs Rs.2000, and pay only after completion of online verification (you will be emailed to make payment).</li>
-    </ol>
-
-    <h3>Section-30 (Tips on dos and donts)</h3>
-    <p></p>
-    <ol>
-        <li>Write mail to ISS, grad admission, </li>
-        <li>Write here (TODO)</li>
-    </ol>
-
-    <h3>Section-31 (How to select universities for self-pay/assitantships)</h3>
-    <p></p>
-    <ol>
-        <li>Write here (TODO)</li>
-        <li>Write here (TODO)</li>
-    </ol>
-
-    <h3>Section-32 (Interview Experience)</h3>
-    <p></p>
-    <ol>
-        <li>Separate platform for sharing interview experience</li>
-        <li>Fill up application in patterened style</li>
-        <li>Google form for the submission</li>
-        <li>Will be updated in website once a week</li>
-    </ol>
+            <h3 id="sec_24">Section-24 (Interview Experience)</h3>
+            <p></p>
+            <ol>
+                <li>TODO in future</li>
+                <li>Separate platform for sharing interview experience</li>
+                <li>Fill up application in patterened style</li>
+                <li>Google form for the submission</li>
+                <li>Will be updated in website once a week</li>
+            </ol>
+        </div>
+    </div>
 
 </body>
 </html>
-
-
-
-<!-- header
-<header id = "header-home">
-    <div class="container">
-        <nav id="main-nav">
-            <h1>Sushil Champ</h1>
-            <ul>
-                <li><a href="#header-home" class="current">Home</a></li>
-                <li><a href="#about-home">About</a></li>                   
-                <li><a href="#contact-home">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="header-content">
-            <h1>Welcome to my <span class="txt-type" data-wait="3000" data-words='["portfolio site !!!"]'></span></h1>
-                <p class="lead"> I specialize as a Pressure-Vessel & Skid Structure Design Engineer.</p>
-                <a href="https://drive.google.com/file/d/1SqEpcIdBB2ARDdrJNoz3J75QeAEQPZis/view" class="btn-light">Download CV</a>
-        </div>
-    </div>
-</header>
-
-
-
-
-<div id="about-home" class="pf-content pf-margin-bottom border-box" style="max-width:1400px;">
-    <p style="font-size:10px">.</p>
-
-
-    <div class="pf-row-padding">
-    
-
-        <div class="pf-third col">
-            <div class="pf-white pf-text-grey pf-card">
-                <div class="pf-display-container">
-                    <img src="img/champ.jpg" style="width:100%" alt="Avatar">
-                    <div class="pf-display-bottomleft pf-container pf-text-black"><p style="font-size: 24px;">Sushil Champ</p></div>
-                </div>
-
-                <div class="pf-container" style="margin-top: 12px;">
-                    <p><i class="fa fa-briefcase    fa-fw pf-margin-right pf-large pf-text-teal">   </i>Pressure-Vessel Engineer</p>
-                    <p><i class="fa fa-home         fa-fw pf-margin-right pf-large pf-text-teal">   </i><a href = "https://goo.gl/maps/iwxdfS5SnNkVNsNVA">Nawalparasi, Nepal</a></p>
-                    <p><i class="fa fa-envelope     fa-fw pf-margin-right pf-large pf-text-teal">   </i><a href="mailto:sushilchamp58@gmail.com">sushilchamp58@gmail.com</a></p>
-                    <p><i class="fa fa-phone        fa-fw pf-margin-right pf-large pf-text-teal">   </i><a href="tel:+9779860562314">9860562314</a></p>
-
-                    <hr class="pf-tb-margin-xx">
-                    <p class="pf-large"><b><i class="fa fa-asterisk fa-fw pf-margin-right pf-text-teal"></i>Skills</b></p>
-
-                    <p class="pf-font-12size">ASME BPVC.VIII.1 Expertise (COMPRESS, PV-Elite)</p>
-                    <div class="pf-light-grey pf-round-xlarge pf-small" style="margin-bottom: 4px;">
-                    <div class="pf-container pf-center pf-round-xlarge pf-teal" style="width:80%">80%</div>
-                    </div>
-
-                    <p class="pf-font-12size">Machine Design / Mechanism Development</p>
-                    <div class="pf-light-grey pf-round-xlarge pf-small" style="margin-bottom: 4px;">
-                    <div class="pf-container pf-center pf-round-xlarge pf-teal" style="width:70%">70%</div>
-                    </div>
-
-                    <p class="pf-font-12size">CAD 2D/3D (Solid-Works, Inventor, Ansys, AutoCAD)</p>
-                    <div class="pf-light-grey pf-round-xlarge pf-small" style="margin-bottom: 4px;">
-                    <div class="pf-container pf-center pf-round-xlarge pf-teal" style="width:90%">90%</div>
-                    </div>
-
-                    <p class="pf-font-12size">MS-Office Package (Word, Excel, Powerpoint)</p>
-                    <div class="pf-light-grey pf-round-xlarge pf-small" style="margin-bottom: 4px;">
-                    <div class="pf-container pf-center pf-round-xlarge pf-teal" style="width:85%">85%</div>
-                    </div>
-
-                    <p class="pf-font-12size">Python / Django / Machine Learning</p>
-                    <div class="pf-light-grey pf-round-xlarge pf-small" style="margin-bottom: 4px;">
-                    <div class="pf-container pf-center pf-round-xlarge pf-teal" style="width:25%">25%</div>
-                    </div>
-
-                    <p class="pf-font-12size">Java (Android Development)</p>
-                    <div class="pf-light-grey pf-round-xlarge pf-small" style="margin-bottom: 4px;">
-                    <div class="pf-container pf-center pf-round-xlarge pf-teal" style="width:15%">15%</div>
-                    </div>
-
-                    <hr class="pf-tb-margin-xx">
-                    <p class="pf-large pf-text-theme"><b><i class="fa fa-globe fa-fw pf-margin-right pf-text-teal"></i>Languages</b></p>
-                    
-                    
-                    <div class="pf-row-padding">
-
-                        <div class="pf-twothird">
-                            <p class="pf-font-12size">English</p>
-                        </div>
-                        <div class="pf-twothird">
-                            <p class="pf-font-12size">
-                                <span class="fa fa-circle pf-checked"></span>
-                                <span class="fa fa-circle pf-checked"></span>
-                                <span class="fa fa-circle pf-checked"></span>
-                                <span class="fa fa-circle pf-checked"></span>
-                                <span class="fa fa-circle pf-unchecked"></span>
-                                <span class="fa fa-circle pf-unchecked"></span></p>
-                        </div>
-
-                        <div class="pf-twothird">
-                            <p class="pf-font-12size">Nepali
-                            </p>
-                        </div>
-                        <div class="pf-twothird">
-                            <p class="pf-font-12size">
-                                <span class="fa fa-circle pf-checked"></span>
-                                <span class="fa fa-circle pf-checked"></span>
-                                <span class="fa fa-circle pf-checked"></span>
-                                <span class="fa fa-circle pf-checked"></span>
-                                <span class="fa fa-circle pf-checked"></span>
-                                <span class="fa fa-circle pf-checked"></span></p>
-                        </div>
-
-                        <div class="pf-twothird">
-                            <p class="pf-font-12size">Hindi</p>
-                        </div>
-                        <div class="pf-twothird">
-                            <p class="pf-font-12size">
-                                <span class="fa fa-circle pf-checked"></span>
-                                <span class="fa fa-circle pf-checked"></span>
-                                <span class="fa fa-circle pf-checked"></span>
-                                <span class="fa fa-circle pf-checked"></span>
-                                <span class="fa fa-circle pf-checked"></span>
-                                <span class="fa fa-circle pf-unchecked"></span></p>
-                        </div>
-
-                    </div>
-                    <p style="font-size:12px">.</p>
-                </div>
-            </div>
-        </div>
-
-
-
-        <div class="pf-twothird col">
-            <div class="pf-container pf-card pf-white pf-margin-bottom">
-                <h2 class="pf-text-grey pf-padding-16"><i class="fa fa-suitcase fa-fw pf-margin-right pf-xxlarge pf-text-teal"></i>Work Experience</h2>
-                <div class="pf-container pf-top-margin-1">
-                    <h5><b>Pressure Vessel Engineer @ Calcgen Solutions</b></h5>
-                    <h6 class="pf-text-teal pf-left-margin-1"><i class="fa fa-calendar fa-fw pf-margin-right"></i>Jan 2019 - <span class="pf-teal pf-round">Current</span></h6>
-                    <p class="pf-left-margin-1">I have an expertise in ASME Boiler and Pressure Vessel Code (VIII.1). I use Codeware-COMPRESS and Intergraph-PVElite as design tools and AutoCAD/Inventor for 2D drafting. I also have moderate expertise in design, modeling (SolidWorks) and drafting of skid structures.</p>
-                </div>
-                <hr class="pf-tb-margin-x">
-                <div class="pf-container pf-top-margin-1">
-                    <h5><b>Internship @ Kiran Shoe Manufacturers</b></h5>
-                    <h6 class="pf-text-teal pf-left-margin-1"><i class="fa fa-calendar fa-fw pf-margin-right"></i>Nov-Dec 2019</h6>
-                    <p class="pf-left-margin-1">I served as an intern in the position of Assistant Technical Manager for two months.</p>
-                </div>
-                <hr class="pf-tb-margin-x">
-                <div class="pf-container pf-top-margin-1">
-                    <h5><b>Crew Member @ Robotics and Automation Center</b></h5>
-                    <h6 class="pf-text-teal pf-left-margin-1"><i class="fa fa-calendar fa-fw pf-margin-right"></i>Jan 2015 - Dec 2017</h6>
-                    <p class="pf-left-margin-1">Served as a crew member of RAC (Robotics and Automation Center) for 3 years in Thapathali Campus. Performed design and fabrication of robotic-machines, mechanisms. Organizing and participation in robotics programs/events.</p>
-                </div>
-                <hr class="pf-tb-margin-x">
-                <div class="pf-container pf-top-margin-1">
-                    <h5><b>Internship @ Tribhuvan International Airport</b></h5>
-                    <h6 class="pf-text-teal pf-left-margin-1"><i class="fa fa-calendar fa-fw pf-margin-right"></i>Sept-Dec 2017</h6>
-                    <p class="pf-left-margin-1">Performed a general aircraft maintainence (DHC-300, MA60, Y12E, Airbus 330, Boeing 757) and assisted in Certification of Airworthiness (CofA) maintenance of DHC-300 model aircraft.</p><br>
-                </div>
-            </div>
-        </div>
-
-
-
-        <div class="pf-third col">
-            <div class="pf-container pf-card pf-white">
-                <h2 class="pf-text-grey pf-padding-16"><i class="fa fa-certificate fa-fw pf-margin-right pf-xxlarge pf-text-teal"></i>Education</h2>
-                <div class="pf-container pf-top-margin-1">
-                    <h5><b>TU, IOE, Thapathali Campus</b></h5>
-                    <h6 class="pf-text-teal pf-left-margin-1"><i class="fa fa-calendar fa-fw pf-margin-right"></i>Aug 2020 - Sept 2022 </h6>
-                    <p class="pf-left-margin-1">Master of Science in Mechanical Design and Manufacturing</p>
-                </div>
-                <hr class="pf-tb-margin-x">
-                <div class="pf-container pf-top-margin-1">
-                    <h5><b>TU, IOE, Thapathali Campus</b></h5>
-                    <h6 class="pf-text-teal pf-left-margin-1"><i class="fa fa-calendar fa-fw pf-margin-right"></i>Nov 2014 - Aug 2018</h6>
-                    <p class="pf-left-margin-1">Bachelor in Mechanical Engineer</p>
-                </div>
-                <br>
-            </div>
-
-            <div class="pf-container pf-card pf-white" style="margin-top: 16px;">
-                <h2 class="pf-text-grey pf-padding-16"><i class="fa fa-gear fa-fw pf-margin-right pf-xxlarge pf-text-teal"></i>Projects</h2>
-                <p><span class="fa fa-wrench"></span>&emsp;Pressure Vessels (Calc / 3D / 2D / FEA)</p>
-                <p>&emsp;&emsp;(ASME BPVC Section-VIII, API-650 Tank)</p>
-                <p><span class="fa fa-wrench"></span>&emsp;Skid Structures (Calc / 3D / 2D / FEA)</p>
-                <p><span class="fa fa-wrench"></span>&emsp;Web App (Vessel Express)</p>
-                <p><span class="fa fa-wrench"></span>&emsp;Banana Fibre Extraction Machine</p>
-                <p><span class="fa fa-wrench"></span>&emsp;AVL (stability analysis, ANKA-UAV)</p>
-                <p><span class="fa fa-wrench"></span>&emsp;Winner of IOE ROBOCON 2018</p>
-                <p><span class="fa fa-wrench"></span>&emsp;IRC (Techfest 2016-17, IIT Mumbai)</p>
-                <p><span class="fa fa-wrench"></span>&emsp;Inauguration robot (IOE, THA)</p>
-                <br>
-            </div>
-
-        </div>
-
-    </div>
-</div>
-
-
-<section id="contact-home" class="text-center py-3">
-    <div class="container">
-        <h2 class="section-title">Contact Me</h2>
-        <div class="bottom-line"></div>
-        <p class="lead">Here is how you can reach me</p>
-
-        <form target="_blank" action="https://formsubmit.co/sushilc.calcgen@gmail.com" method="POST" data-netlify="true" data-netlify-recaptcha="true">
-            <div class="text-fields">
-                <input
-                type="text"
-                class="text-input name-input"
-                placeholder="Name"
-                name="name"
-                />
-                <input
-                type="text"
-                class="text-input subject-input"
-                placeholder="Subject"
-                name="subject"
-                />
-                <input
-                type="email"
-                class="text-input email-input"
-                placeholder="Email Address"
-                name="email"
-                />
-                <input
-                type="text"
-                class="text-input phone-input"
-                placeholder="Phone Number"
-                name="phone"
-                />
-                <textarea
-                class="text-input message-input"
-                placeholder="Enter Message"
-                name="message"
-                ></textarea>
-
-                <div class="py-1">
-                <div data-netlify-recaptcha="true"></div>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="g-recaptcha left-button" data-sitekey="6LcykEcjAAAAAEv-5DSiU7Q-8ZWRfKj_6hHdIlpg"></div>
-                <div class="right-button"> <button type="submit" class="btn-dark">Submit</button> </div>
-            </div>
-        </form>
-    </div>
-</section>
-  
-  
-<section id="contact-b" class="py-3 bg-main">
-    <div class="container">
-        <div class="contact-info">
-            <div>
-                <i class="fas fa-envelope fa-2x"></i>
-                <h3>Email</h3>
-                <p><a style="text-decoration: none; color: white;" href = "mailto:sushilchamp58@gmail.com">sushilchamp58@gmail.com</a></p>
-            </div>
-
-            <div>
-                <i class="fas fa-phone fa-2x"></i>
-                <h3>Phone</h3>
-                <p><a style="text-decoration: none; color: white;" href="tel:+9779860562314">9860562314</a></p>
-            </div>
-
-            <div>
-                <i class="fas fa-home fa-2x"></i>
-                <h3>Address</h3>
-                <p><a style="text-decoration: none; color: white;" href = "https://goo.gl/maps/iwxdfS5SnNkVNsNVA">Nawalparasi, Nepal</a></p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<footer id="main-footer">
-    <div class="footer-content container">
-        <p>Champ &copy; <script>document.write(new Date().getFullYear())</script></p>
-        <div class="social">
-            <a href="https://facebook.com/sushil.champ58" class="link facebook" target="_parent"><span class="fab fa-facebook-square"></span></a>
-            <a href="https://twitter.com/sushil_champ58" class="link twitter" target="_parent"><span class="fab fa-twitter"></span></a>
-            <a href="https://www.linkedin.com/in/sushil-champ" class="link linkedin" target="_parent"><span class="fab fa-linkedin"></span></a>
-            <a href="https://www.instagram.com/sushil.champ" class="link instagram" target="_parent"><span class="fab fa-instagram"></span></a>
-            <a href="https://www.youtube.com/@sushilchamp" class="link youtube" target="_parent"><span class="fab fa-youtube"></span></a>
-            <a href="https://github.com/sushilchamp" class="link github" target="_parent"><span class="fab fa-github"></span></a>
-        </div>
-        </div>
-    </div>
-</footer> -->
-
-
